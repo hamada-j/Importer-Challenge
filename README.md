@@ -13,11 +13,11 @@ Importer-Challenge
  +-- upload
      |
      +--
-|
-docker-compose.yml
-LICENSE
-.gitignore
-README.md
+ |
+ docker-compose.yml
+ LICENSE
+ .gitignore
+ README.md
 
 ```
 
