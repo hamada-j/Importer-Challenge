@@ -1,8 +1,11 @@
 'use strict';
 const fs = require('fs');
+const { NODE_ENV } = process.env;
 
 
 exports.uploadFileToDB = async (arrayJSoN, model, req, res) => {
+
+    const filePath = process.cwd() + '/uploads/' + req.file.filename;
 
     try {
 
@@ -10,10 +13,12 @@ exports.uploadFileToDB = async (arrayJSoN, model, req, res) => {
         await model.insertMany(arrayJSoN).then(() => {
             // Success
             res.status(201).send({ message: `upload csv data into db successfully. ${req.file.originalname} saved.`});
+            
+            //remove test file
+            if(NODE_ENV === 'test'){ fs.unlinkSync(filePath) }
 
         }).catch((error) => {     
             // Fail
-            const filePath = process.cwd() + '/uploads/' + req.file.filename;
             try {
                 //file removed  
                 fs.unlinkSync(filePath);
