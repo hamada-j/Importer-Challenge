@@ -1,7 +1,7 @@
 'use strict';
 const express = require('express');
 const router = express.Router();
-const uploadController = require("../controllers/uploadFile");
+const uploadController = require("../controller/uploadFile");
 
 
 /* POST csv file route. */

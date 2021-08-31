@@ -8,7 +8,7 @@
     "directory": "importer-challenge/upload"
   },
   "scripts": {
-    "start": "NODE_ENV=production node ./bin/www",
+    "start": "NODE_ENV=production  node ./bin/www",
     "dev": "NODE_ENV=development nodemon node ./bin/www",
     "test": "NODE_ENV=test jest --detectOpenHandles --watchAll"
   },
