@@ -1,9 +1,11 @@
-var express = require('express');
-var router = express.Router();
+'use strict';
+const express = require('express');
+const router = express.Router();
+const uploadController = require("../controllers/uploadFile");
 
-/* GET home page. */
-router.get('/', function(req, res, next) {
-  res.send({ title: 'Express' });
-});
+
+/* POST csv file route. */
+router.post('/csv', uploadController.uploadFile);
+
 
 module.exports = router;
