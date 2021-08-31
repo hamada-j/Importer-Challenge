@@ -154,3 +154,27 @@ test('POST /csv, will save the file in server, post the data in db of emissions.
       console.log(err);
     }
 },24000);
+
+
+/** ==========================================
+ 
+                404 TESTING
+ 
+==========================================**/
+
+
+test('GET /test, test 404 the response of the Service for unknowns url', 
+  async () => {
+    try{
+
+    await api
+      .get('/test')
+      .expect(404)
+      .then((response) => {
+        expect(response.body.error).toEqual('404: Not Found');
+      });
+
+    }catch(err){
+      console.log(err);
+    } 
+});
