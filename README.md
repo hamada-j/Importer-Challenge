@@ -32,12 +32,3 @@ Expects a CSV payload and saves the data to a MongoDB database.
 ### Installing
 
 Assuming you’ve already installed Node.js. Clone the repository or download .zip .
-
-### TODO
-
-- [x] New repository.
-- [x] .gitignore.
-- [x] README structure challenge.
-- [ ] Init npm .json.
-- [ ] Init Express.
-- [ ] README structure challenge.
