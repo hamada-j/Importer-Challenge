@@ -3,7 +3,7 @@ const mongoose = require('mongoose');
 
 console.log(`Before connect-> \n\n\n`);
 
-const { DB_NAME, DB_TEST, NODE_ENV, DB_URL_DEV, DB_URL_PROD } = process.env
+const { DB_NAME, DB_TEST, NODE_ENV, DB_URL_DEV, DB_URL_PROD } = process.env;
 const connectingURL = NODE_ENV === 'test' ? DB_TEST : DB_NAME;
 let HOST = DB_URL_DEV;
 let state = 'dev';
@@ -31,5 +31,4 @@ mongoose.connect(
   //console.log(`DesConnect from MongoDB`);
 
 });
-
 
