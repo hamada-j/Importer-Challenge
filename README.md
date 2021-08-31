@@ -29,7 +29,11 @@ Reads data from that same database and serves responses as JSON documents. Filte
 
 Expects a CSV payload and saves the data to a MongoDB database.
 
-## TODO
+### Installing
+
+Assuming you’ve already installed Node.js. Clone the repository or download .zip .
+
+### TODO
 
 - [x] New repository.
 - [x] .gitignore.
