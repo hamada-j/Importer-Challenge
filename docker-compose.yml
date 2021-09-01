@@ -1,0 +1,30 @@
+version: "3.4" # specify docker-compose version
+
+# Define the services/containers to be run
+services:
+  download:
+    image: download
+    build: download
+    environment:
+      NODE_ENV: production
+    ports:
+      - 3000:3000
+  upload:
+    image: upload
+    build: upload
+    environment:
+      NODE_ENV: production
+    ports:
+      - 3001:3001
+  mongodb:
+    container_name: mongodb
+    image: mongo:latest
+    restart: always
+    ports:
+      - 27017:27017
+    expose:
+      - 27017
+    volumes:
+      - data:/data/db
+volumes:
+  data:
