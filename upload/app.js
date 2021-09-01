@@ -8,6 +8,9 @@ const bodyParser = require("body-parser");
 const cors = require("cors");
 require('dotenv').config();
 require("./db/mongoDB");
+const swaggerJSDoc = require('swagger-jsdoc');
+const swaggerUI = require('swagger-ui-express');
+const swaggerOptions = require('./libs/swagger');
 /** ==========================================
  
                   ROUTING
@@ -15,6 +18,13 @@ require("./db/mongoDB");
 ==========================================**/
 const indexRouter = require('./routes/index');
 const app = express();
+/** ==========================================
+ 
+                  Swagger
+ 
+==========================================**/
+const swaggerDocs = swaggerJSDoc(swaggerOptions);
+app.use('/api-docs', swaggerUI.serve, swaggerUI.setup(swaggerDocs));
 /** ==========================================
  
                   Data Base
