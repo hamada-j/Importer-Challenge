@@ -35,7 +35,7 @@ Importer-Challenge
 - MongoDB
 - Git
 - NPM
-- Docker
+- Docker / Docker Compose
 
 ### Run Images as a containers with Docker
 
