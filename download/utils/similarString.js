@@ -1,0 +1,20 @@
+'use strict';
+
+const similarString = function (a, b) {
+
+    let equivalency = 0;
+    let minLength = (a.length > b.length) ? b.length : a.length;    
+    let maxLength = (a.length < b.length) ? b.length : a.length;
+
+    for(var i = 0; i < minLength; i++) {
+        if(a[i] == b[i]) {
+            equivalency++;
+        }
+    }
+
+    let weight = equivalency / maxLength;
+    
+    return (weight * 100) + "%";
+}
+
+module.exports = { similarString: similarString };
