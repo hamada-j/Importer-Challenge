@@ -24,10 +24,13 @@ Importer-Challenge
 ## Upload
 
 Expects a CSV payload and saves the data to a MongoDB database.
+<img width="778" alt="postman" src="https://user-images.githubusercontent.com/57291487/131594839-7512e885-05d5-4c89-8a00-6be77890e2d2.png">
+
 
 ## Download
 
 Reads data from that same database and serves responses as JSON documents. Filters on the data are implemented, with query parameters.
+<img width="697" alt="swagger" src="https://user-images.githubusercontent.com/57291487/131594848-85d9e054-10a8-465f-a7fc-780324e3b195.png">
 
 ## Installing and Run
 
