@@ -74,6 +74,8 @@ The api has of two small services. These two services are totally independent. T
 
 Expects a CSV payload and saves the data to a MongoDB database.
 
+- http://localhost:3001/csv
+
 The document that the endpoint accepts must have the structure and type [emissions.csv](https://github.com/Vizzuality/coding-challenge-examples/blob/software-engineer/importer/data/emissions.csv).
 
 Navigate to the service folder within the project:
@@ -105,11 +107,11 @@ npm run test
 
 ## Download
 
-Reads data from that same database and serves responses as JSON documents. Filters on the data are implemented, with query parameters.
-
-Some filters are implemented in query parameters like. By default the limit is 10 doc per page, but the limit can be changed:
+Reads data from that same database and serves responses as JSON documents. Filters on the data are implemented, with query parameters. By default the limit is 10 doc per page, but the limit can be changed:
 
 - http://localhost:3000/
+
+- http://localhost:3000/?id=12345
 
 - http://localhost:3000/?page=0&limit=59
 
