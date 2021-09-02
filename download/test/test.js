@@ -109,7 +109,7 @@ test('GET /?id=123test, test for incorrect id',
 
       let testId = '123test'
       let text = {
-        message: `Fail to get data for this id: ${testId}`,
+        message: `Fail to get data for this id: ${testId}. Did not exist in db.`,
         error: `Cast to ObjectId failed for value "${testId}" (type string) at path "_id" for model "prodSchema"`
       }
         
@@ -122,7 +122,7 @@ test('GET /?id=123test, test for incorrect id',
         expect(response.body.error).toBe(text.error);
       });
     }catch(err){
-      console.log('error /id ---> ', err);
+      console.log('error /id --i--> ', err);
     } 
 });
 
@@ -149,7 +149,7 @@ test('GET /?id=612bf78520ce490c900b780d, test for correct id ',
 
       });
     }catch(err){
-      console.log('error /id ---> ', err);
+      console.log('error /?id --c--> ', err);
     } 
 });
 
@@ -203,7 +203,7 @@ test(`GET /?country=aia, get all doc in db by country in pagination by default 1
 
       }).catch((error) => { console.log(error);});
     } catch(err) {
-      console.log('error GET / ---> ', err);
+      console.log('error GET /?country ---> ', err);
     } 
 });
 
@@ -228,7 +228,7 @@ test('GET /?country=test, test with wrong value for country',
 
       }).catch((error) => { console.log(error);});
     } catch(err) {
-      console.log('error GET / ---> ', err);
+      console.log('error GET /?country --i--> ', err);
     } 
 });
 
@@ -254,7 +254,7 @@ test(`GET /?country=aia&year=${randomYear}, get all doc in db by country sort by
 
       }).catch((error) => { console.log(error);});
     } catch(err) {
-      console.log('error GET / ---> ', err);
+      console.log('error GET /?country&year ---> ', err);
     } 
 });
 
@@ -283,7 +283,7 @@ test(`GET /?sector=TotalIncludingLULUCF, get all doc in db by sector in paginati
 
       }).catch((error) => { console.log(error);});
     } catch(err) {
-      console.log('error GET / ---> ', err);
+      console.log('error GET /?sector ---> ', err);
     } 
 });
 

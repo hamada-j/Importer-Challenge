@@ -8,7 +8,7 @@ const HR = require('../utils/handleError');
 
 exports.getData = async (req, res, next) =>  {
 
-  let options = req.query;
+  const options = req.query;
 
   if (Object.keys(options).length === 0){ 
     ALL.paginationGetAll(options, req, res)   

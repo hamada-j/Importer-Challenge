@@ -4,9 +4,9 @@ const OPTIONS = require('../utils/entityOptions')
 
 exports.paginationGetAll = async (options, req, res) => {
 
-    let otherOptions = OPTIONS.options(options);
-    let limit = otherOptions.limit;
-    let page = otherOptions.page;
+    const otherOptions = OPTIONS.options(options);
+    const limit = otherOptions.limit;
+    const page = otherOptions.page;
 
     if (!isNaN(limit) && !isNaN(page)) {
 

@@ -5,7 +5,7 @@ const options = {
         "description": "Build a small REST API Reads data from database and serves responses as JSON documents. Filters on the data are implemented, with query parameters.",
         "contact": {
             name: "Hamada",
-            github: "https://github.com/hamada-j"
+            github: "https://github.com/hamada-j/Importer-Challenge.git"
         },
         
         "info": {

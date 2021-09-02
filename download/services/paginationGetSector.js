@@ -6,13 +6,14 @@ const OPTIONS = require('../utils/entityOptions')
 
 exports.getBySector = async (options, req, res) => {
 
+    const sectors = SECTOR.sector();
+    const arraySectors = [];
     let sector;
-    let sectors = SECTOR.sector();
-    let arraySec = [];
+    
 
     // percent of similarities sector and position
     for(let i = 0; i < sectors.length; i++){  
-        arraySec.push(
+        arraySectors.push(
             sectors[i], 
             parseInt(
                 SIMILAR.similarString(
@@ -26,17 +27,17 @@ exports.getBySector = async (options, req, res) => {
     let temp = 0;
     let position;
 
-    arraySec.forEach((element,i) => {
+    arraySectors.forEach((element,i) => {
         if (temp < element) {
             temp = element;
             position = i
         }
     });
      
-    sector = arraySec[position - 1];
+    sector = arraySectors[position - 1];
 
-    let otherOptions = OPTIONS.options(options);
-    let skipData = otherOptions.limit * otherOptions.page;  
+    const otherOptions = OPTIONS.options(options);
+    const skipData = otherOptions.limit * otherOptions.page;  
 
     try{
         

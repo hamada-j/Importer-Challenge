@@ -23,12 +23,10 @@ mongoose.connect(
 }).then((res) => {
 
   console.log(`\n\n\nConnected to MongoDB in ${NODE_ENV}\n\n${res.STATES.connected}\n\n` );
-  //console.log(`Connected to MongoDB` );
 
 }).catch((err) => {
 
   console.log(`DesConnect from MongoDB \n\n${err}\n`);
-  //console.log(`DesConnect from MongoDB`);
 
 });
 

@@ -6,7 +6,7 @@ const similarString = function (a, b) {
     let minLength = (a.length > b.length) ? b.length : a.length;    
     let maxLength = (a.length < b.length) ? b.length : a.length;
 
-    for(var i = 0; i < minLength; i++) {
+    for(let i = 0; i < minLength; i++) {
         if(a[i] == b[i]) {
             equivalency++;
         }

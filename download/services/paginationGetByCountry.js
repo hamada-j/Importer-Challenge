@@ -4,8 +4,8 @@ const OPTIONS = require('../utils/entityOptions')
 
 exports.getByCountry = async (options, req, res) => {
     
-    let nationName = options.country.toUpperCase();
-    let otherOptions = OPTIONS.options(options);
+    const nationName = options.country.toUpperCase();
+    const otherOptions = OPTIONS.options(options);
 
     if (nationName.length === 3) {
 

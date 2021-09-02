@@ -2,6 +2,8 @@
 
 const sector = function () {
 
+  // Idea: add all sectors dynamically after upload de doc by save them in file in server
+
   let arraySector = [
     'Waste',
     'Total including LULUCF',

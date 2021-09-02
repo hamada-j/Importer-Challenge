@@ -4,9 +4,9 @@ const OPTIONS = require('../utils/entityOptions')
 
 exports.getByCountrySortByYear = async (options, req, res) => {
  
-    let year = Math.abs(parseInt(options.year));
-    let country = options.country.toUpperCase() 
-    let otherOptions = OPTIONS.options(options);
+    const year = Math.abs(parseInt(options.year));
+    const country = options.country.toUpperCase() 
+    const otherOptions = OPTIONS.options(options);
 
     if (!isNaN(year) && year >= 1850 && year <= 2014){
 
