@@ -69,7 +69,7 @@ app.use('/', indexRouter);
 app.use(function(req, res, next) {
     res.status(404).send({ 
       error: '404: Not Found',
-      message: 'visit http://localhost:3000/'
+      message: 'visit http://localhost:3000/api-docs'
     });
 });
 
